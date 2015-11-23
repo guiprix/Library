@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+	<definition name="standard" template="/WEB-INF/views/layout/layout.jsp">
+        <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp"/>
+    </definition>
+    
+    <definition name="common.index" extends="standard">
+        <put-attribute name="body" value="/WEB-INF/views/common/index.jsp"/>
+    </definition>
+  
+	<definition name="common.welcome" extends="standard">
+        <put-attribute name="body" value="/WEB-INF/views/common/welcome.jsp"/>
+    </definition>
+   
+    <definition name="titles.views" extends="standard">
+        <put-attribute name="body" value="/WEB-INF/views/titles/views.jsp"/>
+    </definition>
+
+    <definition name="titles.createform" extends="standard">
+        <put-attribute name="action" value="/titles/create.do"/><!-- quando chiamo la "action"  allora faccio create -->
+        <put-attribute name="body" value="/WEB-INF/views/titles/title_form.jsp"/><!-- e alla jsp layaout metto il body title_form.jsp che devo creare -->
+    </definition>  
+    
+	<definition name="titles.updateform" extends="standard">
+        <put-attribute name="action" value="/titles/update.do"/>
+        <put-attribute name="body" value="/WEB-INF/views/titles/title_form.jsp"/>
+    </definition>    
+
+    <definition name="titles.deleteform" extends="standard">
+        <put-attribute name="action" value="/titles/delete.do"/>
+        <put-attribute name="delete" value="true"/><!-- questo delete true viene preso da javascript nella titleform.jsp all inizio e con una 
+        funzione javascript diabilita i cmppi che verranno cncellati non si possono piu miodificare -->
+        <put-attribute name="body" value="/WEB-INF/views/titles/title_form.jsp"/>
+    </definition>     
+
+</tiles-definitions>
