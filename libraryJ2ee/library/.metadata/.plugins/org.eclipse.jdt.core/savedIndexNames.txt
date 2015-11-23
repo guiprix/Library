@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+/Users/guidovendrame/develop/MWT 2013/J2EE/develop/aula/library/.metadata/.plugins/org.eclipse.jdt.core

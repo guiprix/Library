@@ -1,0 +1,27 @@
+[main]
+authc.loginUrl = /index.do
+authc.successUrl = /common/welcome.do
+myroles=it.univaq.mwt.j2ee.library.common.shiro.MyRolesAuthorizationFilter
+myRealm = it.univaq.mwt.j2ee.library.common.shiro.MyAuthorizingRealm
+securityManager.realms = $myRealm 
+
+[users]
+#borrower = borrower, borrower
+#librarian = librarian, librarian
+#masterlibrarian = masterlibrarian, masterlibrarian
+
+[roles]
+#borrower = *
+#librarian = *
+#masterlibrarian = *
+
+[urls]
+/index.do = authc
+/logout.do = logout
+/common/** = authc, myroles[librarian, masterlibrarian, borrower]
+/titles/** = authc, myroles[librarian,masterlibrarian]
+/borrowers/** = authc, myroles[librarian, masterlibrarian]
+/items/** = authc, myroles[librarian, masterlibrarian]
+/librarians/** = authc, myroles[masterlibrarian]
+/items/checkoutitem.do = authc, myroles[borrower]
+/items/returntitem.do = authc, myroles[borrower]

@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
+
+<%@include file="/layout/header.jsp" %>
+<%@include file="/layout/menu.jsp" %>
+
+<div class="container">
+
+<div class="hero-unit">
+
+<form class="form-horizontal" action="${pageContext.request.contextPath}/titles/insert.do" method="post">
+<div class="control-group">
+    <label class="control-label" for="name">Nome</label>
+    <div class="controls">
+      	<input type="text" name="name" id="name"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="author">Autore</label>
+    <div class="controls">
+      	<input type="text" name="author" id="author"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="name">Descrizione</label>
+    <div class="controls">
+      	<input type="text" name="description" id="description"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="isbn">Isbn</label>
+    <div class="controls">
+      	<input type="text" name="isbn" id="isbn"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="publicationYear">Anno Pubblicazione</label>
+    <div class="controls">
+      	<input type="text" name="publicationYear" id="publicationYear"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="editor">Editore</label>
+    <div class="controls">
+      	<input type="text" name="editor" id="editor"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="titleKind">Tipo</label>
+    <div class="controls">
+		<select id="titleKind" name="titleKind">
+			<c:forEach items="${requestScope.titleKinds}" var="titleKind">
+				<option value="${titleKind.id}">${titleKind.name}</option>
+			</c:forEach>
+		</select>
+
+    </div>
+</div>
+
+<div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Salva</button>
+    </div>
+</div>
+</form>
+</div>
+
+<hr>
+<%@include file="/layout/footer.jsp" %>
+</div>
+</body>
+</html>

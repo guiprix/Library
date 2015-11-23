@@ -1,0 +1,59 @@
+# -- standard errors --
+errors.header=<ul>
+errors.prefix=<li>
+errors.suffix=</li>
+errors.footer=</ul>
+
+
+## -- validator --
+errors.invalid=The field {0} is invalid.
+errors.maxlength=The field {0} can not be greater than {1} characters.
+errors.minlength=The field {0} can not be less than {1} characters.
+errors.range=The field {0} is not in the range {1} through {2}.
+errors.required=The field {0} is required.
+errors.byte=The field {0} must be an byte.
+errors.date=The field {0} is not a date.
+errors.short=The field {0} must be an short.
+errors.integer=The field {0} must be an integer.
+errors.long=The field {0} must be an long.
+errors.float=The field {0} must be an float.
+errors.double=The field {0} must be an double.
+errors.creditcard=The field {0} is not a valid credit card number.
+errors.email=The field {0} is an invalid e-mail address.
+errors.url=The field {0} is an invalid url.
+errors.maskmsg=The field {0} must be ########.##### format
+
+
+
+# -- other --
+common.footer=Master Web Technology.
+common.signin=Sign in
+common.submit=Save
+common.cancel=Cancel
+common.delete=Delete
+common.actions=Actions
+common.welcome=Welcome
+common.addbutton=Add
+
+menu.home=Home
+menu.browse=Browse
+menu.search=Search
+menu.logout=Logout
+menu.manageborrowers=Manages Borrowers
+menu.manageitems=Manages Items
+menu.managetitles=Manages Titoli
+menu.assumeidentityborrower=Assume Identy of Borrower
+menu.managelibrarians=Manages Librarians
+menu.makereservation=Make Reservation
+menu.removereservation=Remove Reservation
+menu.checkoutitem=Check-out Item
+menu.returntitem=Return Item 
+
+
+title.name=Name
+title.author=Author
+title.description=Description
+title.isbn=ISBN
+title.publicationYear=Pubblication Year
+title.editor=Editor
+title.titleKind=Type
